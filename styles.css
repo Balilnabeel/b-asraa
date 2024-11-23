@@ -1,0 +1,119 @@
+/* خلفية متدرجة بألوان متعددة */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(45deg, #6a11cb, #2575fc, #ff512f); /* خلفية متدرجة */
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.6); /* خلفية شفافة داكنة */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 60px; /* رفع المحتوى ليكون أسفل شريط الأخبار */
+}
+
+header h1 {
+    font-size: 36px;
+    margin: 0;
+}
+
+/* قسم الأخبار المتحركة */
+.news-ticker {
+    background-color: #808080; /* لون رصاصي */
+    color: #fff;
+    padding: 10px;
+    white-space: nowrap;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    font-size: 20px;
+    font-weight: bold;
+    overflow: hidden;
+    z-index: 1000; /* جعل الشريط فوق جميع العناصر الأخرى */
+}
+
+.news-ticker p {
+    animation: scroll-news 15s linear infinite;
+    margin: 0;
+}
+
+@keyframes scroll-news {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.container {
+    width: 80%;
+    margin: 20px auto;
+}
+
+.weather-widget {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.weather-widget h2 {
+    font-size: 24px;
+}
+
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.image-gallery img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.section-title {
+    font-size: 28px;
+    color: #ffcc00;
+    margin-top: 30px;
+}
+
+.section-content {
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: justify;
+}
