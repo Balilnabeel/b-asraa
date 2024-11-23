@@ -4,82 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>موقع البصرة</title>
-    <link rel="stylesheet" href="styles.css"> <!-- الربط مع ملف CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <!-- شريط الأخبار -->
-    <div class="news-ticker">
-        <p>أخبار البصرة: سيتم تحديث الأخبار قريباً...</p>
+    <!-- شريط الأخبار الثابت -->
+    <div id="news-bar">
+        <marquee>آخر الأخبار: زيارة معالم البصرة وتطورات الاقتصاد!</marquee>
     </div>
 
-    <!-- الرأس - Header -->
-    <header>
-        <div class="header-content">
-            <h1>موقع البصرة</h1>
-            <div class="menu-icon" id="menu-icon">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </div> <!-- أيقونة القائمة -->
+    <!-- شريط القوائم -->
+    <div class="menu-toggle" onclick="toggleMenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+    <nav id="menu">
+        <ul>
+            <li><a href="#about">عن البصرة</a></li>
+            <li><a href="https://ar.tripadvisor.com/Attractions-g659504-Activities-Basrah_Basrah_Province.html">المعالم السياحية</a></li>
+            <li><a href="#economy">الاقتصاد</a></li>
+            <li><a href="https://ar.tripadvisor.com/Restaurants-g659504-Basrah_Basrah_Province.html">المطاعم</a></li>
+            <li><a href="https://maps.app.goo.gl/3pZLVH3evrZ3fM8M7?g_st=com.google.maps.preview.copy" target="_blank">موقع البصرة</a></li>
+        </ul>
+    </nav>
+
+    <!-- الأقسام الرئيسية -->
+    <section id="about">
+        <h2>عن البصرة</h2>
+        <p>البصرة هي مدينة غنية بالمعالم السياحية والتاريخية. تقع في جنوب العراق...</p>
+    </section>
+
+    <section id="tourism">
+        <h2>المعالم السياحية</h2>
+        <p>تعتبر البصرة من أهم المدن السياحية في العراق، حيث تحتوي على العديد من المعالم مثل...</p>
+    </section>
+
+    <section id="economy">
+        <h2>الاقتصاد في البصرة</h2>
+        <p>تتمتع البصرة باقتصاد قوي قائم على النفط، كما تعتبر المدينة مركزًا تجاريًا رئيسيًا...</p>
+    </section>
+
+    <section id="restaurants">
+        <h2>أفضل المطاعم في البصرة</h2>
+        <p>البصرة تقدم مجموعة متنوعة من المطاعم التي تقدم الأطعمة المحلية والدولية...</p>
+    </section>
+
+    <!-- الصور المتحركة -->
+    <div class="carousel-container">
+        <div class="carousel-slide">
+            <img src="images/photo_2024-11-23_19-15-20.jpg" class="carousel-img" alt="صورة البصرة 1">
+            <img src="images/photo_2024-11-23_19-15-46.jpg" class="carousel-img" alt="صورة البصرة 2">
+            <img src="images/photo_2024-11-24_00-12-39.jpg" class="carousel-img" alt="صورة البصرة 3">
         </div>
-        <nav id="nav-menu">
-            <ul>
-                <li><a href="#tourist">المعالم السياحية</a></li>
-                <li><a href="#economy">اقتصاد البصرة</a></li>
-                <li><a href="#population">عدد سكان البصرة</a></li>
-                <li><a href="#history">تاريخ البصرة</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <!-- carousel للصور المتقلبة -->
-    <div class="carousel">
-        <div class="carousel-container">
-            <img src="images/photo_2024-11-23_19-15-20.jpg" alt="صورة 1">
-            <img src="images/photo_2024-11-23_19-15-46.jpg" alt="صورة 2">
-            <img src="images/photo_2024-11-23_19-15-59.jpg" alt="صورة 3">
-        </div>
-        <button class="prev" id="prev">&lt;</button>
-        <button class="next" id="next">&gt;</button>
     </div>
 
-    <!-- محتوى الموقع -->
-    <div class="container">
-        <section id="tourist">
-            <h2 class="section-title">المعالم السياحية في البصرة</h2>
-            <div class="section-content">
-                <p>البصرة تتميز بعدد من المعالم السياحية المميزة مثل شط العرب، كورنيش البصرة، وميناء البصرة. يتمتع السياح بجوها الساحلي الجميل.</p>
-            </div>
-        </section>
-
-        <section id="economy">
-            <h2 class="section-title">اقتصاد البصرة</h2>
-            <div class="section-content">
-                <p>البصرة تعد مركزاً مهماً في الاقتصاد العراقي حيث تقع فيها أكبر حقول النفط في العراق. يتم استخراج النفط الخام من حقول مثل الرميلة.</p>
-            </div>
-        </section>
-
-        <section id="population">
-            <h2 class="section-title">عدد سكان البصرة</h2>
-            <div class="section-content">
-                <p>يبلغ عدد سكان البصرة أكثر من 3 ملايين نسمة حسب آخر التعدادات. وهي إحدى أكبر المدن في العراق.</p>
-            </div>
-        </section>
-
-        <section id="history">
-            <h2 class="section-title">تاريخ البصرة</h2>
-            <div class="section-content">
-                <p>تعتبر البصرة مدينة تاريخية قديمة، حيث كانت مركزاً هاماً للتجارة والعلوم في العصور الإسلامية. تحتوي على العديد من الآثار والمواقع التاريخية.</p>
-            </div>
-        </section>
-    </div>
-
-    <!-- تذييل الصفحة -->
-    <footer>
-        <p>حقوق الطبع والنشر © 2024 موقع البصرة. جميع الحقوق محفوظة.</p>
-    </footer>
-
-    <script src="scripts.js"></script> <!-- الربط مع ملف JavaScript -->
+    <script src="script.js"></script>
 </body>
 </html>

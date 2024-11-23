@@ -1,13 +1,19 @@
-// السلوك عند الضغط على زر القائمة (Hamburger Menu)
-const menuIcon = document.getElementById('menu-icon'); // أيقونة القائمة
-const navMenu = document.getElementById('nav-menu');  // قائمة التنقل
+function toggleMenu() {
+    const menu = document.getElementById("menu");
+    menu.classList.toggle("active");
+}
 
-// إضافة حدث عند النقر على أيقونة القائمة
-menuIcon.addEventListener('click', () => {
-    navMenu.classList.toggle('active'); // تغيير حالة القائمة لإظهارها أو إخفائها
-});
+// تحريك الصور في السلايدر
+let index = 0;
+const slides = document.querySelector('.carousel-slide');
+const images = document.querySelectorAll('.carousel-img');
 
-// السلوك للصور المتقلبة (Carousel)
-let currentIndex = 0;
-const slides = document.querySelectorAll('.carousel-container img');
-const totalSlides = slides.length
+function changeImage() {
+    index++;
+    if (index >= images.length) {
+        index = 0;
+    }
+    slides.style.transform = `translateX(-${index * 100}%)`;
+}
+
+setInterval(changeImage, 3000);

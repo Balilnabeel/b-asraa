@@ -1,0 +1,139 @@
+/* التنسيق العام */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #FF7F50, #D4AF37); /* تدرج لوني بين الأحمر والذهبي */
+    color: #333;
+}
+
+/* شريط الأخبار العلوي */
+#news-bar {
+    background-color: #34495e;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 18px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+}
+
+/* تنسيق شريط القوائم */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    padding: 15px;
+    margin-top: 20px;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+}
+
+.menu-toggle .bar {
+    width: 35px;
+    height: 5px;
+    background-color: #2c3e50;
+    margin: 6px 0;
+}
+
+#menu {
+    display: flex;
+    justify-content: center;
+    background-color: #34495e;
+    padding: 15px 0;
+}
+
+#menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#menu ul li {
+    margin: 0 20px;
+}
+
+#menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+#menu ul li a:hover {
+    color: #f39c12;
+}
+
+/* تنسيق الأقسام */
+section {
+    padding: 40px;
+    margin: 80px 0;
+    background-color: rgba(255, 255, 255, 0.8); /* خلفية شبه شفافة */
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    color: #2c3e50;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+p, ul {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #555;
+}
+
+ul li {
+    margin: 15px 0;
+}
+
+/* الصور المتحركة */
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+    margin: 30px auto;
+}
+
+.carousel-slide {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    margin-right: 20px;
+}
+
+/* استجابة للموبايل */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    #menu {
+        display: none;
+        flex-direction: column;
+        background-color: #34495e;
+    }
+
+    #menu.active {
+        display: block;
+    }
+
+    #menu ul li {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    section {
+        margin: 15px;
+    }
+}
