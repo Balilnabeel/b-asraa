@@ -1,28 +1,15 @@
-/* خلفية متدرجة بألوان متعددة */
+/* خلفية متدرجة بألوان مشابهة للموقع */
 body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(45deg, #6a11cb, #2575fc, #ff512f); /* خلفية متدرجة */
+    background: linear-gradient(45deg, #4c6ef5, #0097f7, #ffd700); /* خلفية متدرجة */
     color: white;
     margin: 0;
     padding: 0;
 }
 
-header {
-    background-color: rgba(0, 0, 0, 0.6); /* خلفية شفافة داكنة */
-    color: white;
-    padding: 20px;
-    text-align: center;
-    margin-top: 60px; /* رفع المحتوى ليكون أسفل شريط الأخبار */
-}
-
-header h1 {
-    font-size: 36px;
-    margin: 0;
-}
-
-/* قسم الأخبار المتحركة */
+/* شريط الأخبار */
 .news-ticker {
-    background-color: #808080; /* لون رصاصي */
+    background-color: #333;
     color: #fff;
     padding: 10px;
     white-space: nowrap;
@@ -33,8 +20,7 @@ header h1 {
     width: 100%;
     font-size: 20px;
     font-weight: bold;
-    overflow: hidden;
-    z-index: 1000; /* جعل الشريط فوق جميع العناصر الأخرى */
+    z-index: 1000; /* لجعل الشريط فوق كل شيء */
 }
 
 .news-ticker p {
@@ -51,46 +37,152 @@ header h1 {
     }
 }
 
+/* الرأس - Header */
+header {
+    background-color: rgba(0, 0, 0, 0.7); /* خلفية داكنة شفافة */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    margin-top: 60px; /* رفع المحتوى ليكون أسفل شريط الأخبار */
+}
+
+header h1 {
+    font-size: 36px;
+    margin: 0;
+}
+
+/* شريط القوائم - قائمة الهامبرغر */
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    width: 30px;
+    height: 20px;
+    margin-top: 10px;
+}
+
+.bar {
+    background-color: #ffd700;
+    height: 4px;
+    width: 100%;
+    margin: 5px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #ffd700;
+    text-decoration: none;
+}
+
+/* تفعيل القائمة عند النقر عليها */
+nav.active ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* عند تصغير الشاشة لعرض الأجهزة الصغيرة */
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu-icon {
+        display: block; /* إظهار الأيقونة */
+    }
+
+    nav.active ul {
+        display: flex;
+    }
+}
+
+/* carousel للصور المتقلبة */
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 40px auto;
+    overflow: hidden;
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-container img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+/* تنسيق محتوى الصور المتقلبة */
 .container {
     width: 80%;
     margin: 20px auto;
 }
 
-.weather-widget {
-    background-color: #333;
-    padding: 20px;
-    border-radius: 10px;
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
+.section-title {
+    font-size: 28px;
+    color: #ffd700;
+    margin-top: 30px;
 }
 
-.weather-widget h2 {
-    font-size: 24px;
+.section-content {
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: justify;
+    margin-bottom: 20px;
 }
 
-.image-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-.image-gallery img {
-    width: 100%;
-    max-width: 300px;
-    border-radius: 12px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.image-gallery img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
-}
-
+/* تنسيق التذييل - Footer */
 footer {
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.7);
     color: white;
     text-align: center;
     padding: 10px;
@@ -104,16 +196,4 @@ footer a {
 
 footer a:hover {
     text-decoration: underline;
-}
-
-.section-title {
-    font-size: 28px;
-    color: #ffcc00;
-    margin-top: 30px;
-}
-
-.section-content {
-    font-size: 18px;
-    line-height: 1.6;
-    text-align: justify;
 }

@@ -3,70 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="موقع شامل عن البصرة يتضمن الطقس والأخبار وأماكن سياحية">
-    <title>البصرة - مدينة الجمال والتاريخ</title>
-    <link rel="stylesheet" href="styles.css"> <!-- ربط ملف CSS هنا -->
+    <title>موقع البصرة</title>
+    <link rel="stylesheet" href="styles.css"> <!-- الربط مع ملف CSS -->
 </head>
 <body>
 
-<!-- قسم الأخبار المتحركة -->
-<div class="news-ticker">
-    <p>أخبار البصرة: تطور جديد في قطاع السياحة، افتتاح معالم جديدة في البصرة، أخبار الطقس لهذا اليوم، والمزيد...</p>
-</div>
+    <!-- شريط الأخبار -->
+    <div class="news-ticker">
+        <p>أخبار البصرة: سيتم تحديث الأخبار قريباً...</p>
+    </div>
 
-<header>
-    <h1>البصرة - مدينة الجمال والتاريخ</h1>
-</header>
-
-<div class="container">
-    <!-- قسم الطقس -->
-    <div class="weather-widget">
-        <div>
-            <h2>الطقس في البصرة</h2>
-            <p>اليوم: مشمس | 35°C</p>
+    <!-- الرأس - Header -->
+    <header>
+        <div class="header-content">
+            <h1>موقع البصرة</h1>
+            <div class="menu-icon" id="menu-icon">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div> <!-- أيقونة القائمة -->
         </div>
-        <div>
-            <img src="https://www.accuweather.com/images/weathericons/01.png" alt="Weather Icon">
+        <nav id="nav-menu">
+            <ul>
+                <li><a href="#tourist">المعالم السياحية</a></li>
+                <li><a href="#economy">اقتصاد البصرة</a></li>
+                <li><a href="#population">عدد سكان البصرة</a></li>
+                <li><a href="#history">تاريخ البصرة</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- carousel للصور المتقلبة -->
+    <div class="carousel">
+        <div class="carousel-container">
+            <img src="images/photo_2024-11-23_19-15-20.jpg" alt="صورة 1">
+            <img src="images/photo_2024-11-23_19-15-46.jpg" alt="صورة 2">
+            <img src="images/photo_2024-11-23_19-15-59.jpg" alt="صورة 3">
         </div>
+        <button class="prev" id="prev">&lt;</button>
+        <button class="next" id="next">&gt;</button>
     </div>
 
-    <!-- عن البصرة -->
-    <h2 class="section-title">عن البصرة</h2>
-    <div class="section-content">
-        <p>البصرة هي ثالث أكبر مدينة في العراق، تقع في أقصى الجنوب الشرقي. تأسست المدينة منذ آلاف السنين ومرت بالكثير من الحضارات مثل السومريين، والبابليين، والإغريق، والعرب. تاريخها العريق جعلها مركزًا حضاريًا وتجاريًا في المنطقة. اليوم، تعتبر البصرة مدينة متجددة، تجمع بين التراث الثقافي العريق والحداثة. تشتهر المدينة بالموانئ الكبرى والنفط والغاز الطبيعي، إلى جانب دورها البارز في التجارة البحرية.</p>
+    <!-- محتوى الموقع -->
+    <div class="container">
+        <section id="tourist">
+            <h2 class="section-title">المعالم السياحية في البصرة</h2>
+            <div class="section-content">
+                <p>البصرة تتميز بعدد من المعالم السياحية المميزة مثل شط العرب، كورنيش البصرة، وميناء البصرة. يتمتع السياح بجوها الساحلي الجميل.</p>
+            </div>
+        </section>
+
+        <section id="economy">
+            <h2 class="section-title">اقتصاد البصرة</h2>
+            <div class="section-content">
+                <p>البصرة تعد مركزاً مهماً في الاقتصاد العراقي حيث تقع فيها أكبر حقول النفط في العراق. يتم استخراج النفط الخام من حقول مثل الرميلة.</p>
+            </div>
+        </section>
+
+        <section id="population">
+            <h2 class="section-title">عدد سكان البصرة</h2>
+            <div class="section-content">
+                <p>يبلغ عدد سكان البصرة أكثر من 3 ملايين نسمة حسب آخر التعدادات. وهي إحدى أكبر المدن في العراق.</p>
+            </div>
+        </section>
+
+        <section id="history">
+            <h2 class="section-title">تاريخ البصرة</h2>
+            <div class="section-content">
+                <p>تعتبر البصرة مدينة تاريخية قديمة، حيث كانت مركزاً هاماً للتجارة والعلوم في العصور الإسلامية. تحتوي على العديد من الآثار والمواقع التاريخية.</p>
+            </div>
+        </section>
     </div>
 
-    <!-- مناطق سياحية في البصرة -->
-    <h2 class="section-title">أهم الأماكن السياحية في البصرة</h2>
-    <div class="section-content">
-        <h3>1. جزيرة السندباد</h3>
-        <p>جزيرة السندباد تعتبر واحدة من أجمل المواقع السياحية في البصرة، تقع في شط العرب وتتميز بموقعها المثالي بين الطبيعة والتاريخ. يشاع أن السندباد البحري كان يمر بهذه المنطقة في رحلاته المليئة بالمغامرات.</p>
-        
-        <h3>2. سوق البصرة القديم</h3>
-        <p>أحد أقدم الأسواق في العراق، ويعد مكانًا تاريخيًا رائعًا للتجول وشراء المنتجات التقليدية مثل التوابل والمجوهرات والملابس.</p>
-        
-        <h3>3. حديقة الأندلس</h3>
-        <p>تعد من أكبر الحدائق في البصرة، حيث تضم مساحات خضراء كبيرة، ممرات للمشي، بحيرات صناعية ونوافير جميلة. تعتبر مكانًا مثاليًا للعائلات للراحة والاستمتاع.</p>
-        
-        <h3>4. متحف البصرة</h3>
-        <p>يحتوي المتحف على مجموعة رائعة من الآثار التي تعكس تاريخ المدينة، من العصر السومري وحتى العصر الحديث.</p>
-        
-        <h3>5. شاطئ البحر العربي</h3>
-        <p>البصرة تحتوي على شواطئ خلابة على البحر العربي، مما يوفر للزوار فرصة الاستمتاع بالأنشطة البحرية المختلفة مثل السباحة والرياضات المائية.</p>
-    </div>
+    <!-- تذييل الصفحة -->
+    <footer>
+        <p>حقوق الطبع والنشر © 2024 موقع البصرة. جميع الحقوق محفوظة.</p>
+    </footer>
 
-    <!-- معرض الصور -->
-    <h2 class="section-title">أجمل الأماكن في البصرة</h2>
-    <div class="image-gallery">
-        <img src="images/photo_2024-11-23_19-15-20.jpg" alt="Basra Image 1">
-        <img src="images/photo_2024-11-23_19-15-46.jpg" alt="Basra Image 2">
-        <img src="images/photo_2024-11-23_19-15-59.jpg" alt="Basra Image 3">
-    </div>
-</div>
-
-<footer>
-    <p>حقوق النشر © 2024 | جميع الحقوق محفوظة</p>
-</footer>
-
+    <script src="scripts.js"></script> <!-- الربط مع ملف JavaScript -->
 </body>
 </html>
