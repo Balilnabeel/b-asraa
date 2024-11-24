@@ -3,58 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>موقع البصرة</title>
+    <title>موقع حصري</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- شريط الأخبار الثابت -->
-    <div id="news-bar">
-        <marquee>آخر الأخبار: زيارة معالم البصرة وتطورات الاقتصاد!</marquee>
+
+    <!-- شريط الأخبار -->
+    <div class="news-bar">
+        <marquee id="newsText">أخبار سريعة: مرحباً بكم في موقعنا!</marquee>
+    </div>
+
+    <!-- محول اللغة -->
+    <div class="language-switcher">
+        <select id="language" onchange="changeLanguage()">
+            <option value="ar">العربية</option>
+            <option value="en">English</option>
+            <option value="ku">Kurdish</option>
+        </select>
     </div>
 
     <!-- شريط القوائم -->
-    <div class="menu-toggle" onclick="toggleMenu()">
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-    </div>
-    <nav id="menu">
-        <ul>
-            <li><a href="#about">عن البصرة</a></li>
-            <li><a href="https://ar.tripadvisor.com/Attractions-g659504-Activities-Basrah_Basrah_Province.html">المعالم السياحية</a></li>
-            <li><a href="#economy">الاقتصاد</a></li>
-            <li><a href="https://ar.tripadvisor.com/Restaurants-g659504-Basrah_Basrah_Province.html">المطاعم</a></li>
-            <li><a href="https://maps.app.goo.gl/3pZLVH3evrZ3fM8M7?g_st=com.google.maps.preview.copy" target="_blank">موقع البصرة</a></li>
+    <div class="menu-bar">
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <ul id="menu" class="menu">
+            <li><a href="#" id="homeLink">الرئيسية</a></li>
+            <li><a href="#" id="aboutLink"> الموقع</a></li>
+            <li><a href="#" id="servicesLink">الأماكن السياحيه</a></li>
+            <li><a href="#" id="contactLink"> المطاعم</a></li>
         </ul>
-    </nav>
+    </div>
 
-    <!-- الأقسام الرئيسية -->
-    <section id="about">
-        <h2>عن البصرة</h2>
-        <p>البصرة هي مدينة غنية بالمعالم السياحية والتاريخية. تقع في جنوب العراق...</p>
-    </section>
+    <!-- رسالة تحذيريه مؤقتة -->
+    <div id="warningMessage" class="warning-message">
+        
+        <p>يجب عليك الانتباه إلى كل محتويات الصفحه</p>
+    <button id="closeButton">X</button>
+    <button id="followButton">متابعة</button>
+    </div>
 
-    <section id="tourism">
-        <h2>المعالم السياحية</h2>
-        <p>تعتبر البصرة من أهم المدن السياحية في العراق، حيث تحتوي على العديد من المعالم مثل...</p>
-    </section>
-
-    <section id="economy">
-        <h2>الاقتصاد في البصرة</h2>
-        <p>تتمتع البصرة باقتصاد قوي قائم على النفط، كما تعتبر المدينة مركزًا تجاريًا رئيسيًا...</p>
-    </section>
-
-    <section id="restaurants">
-        <h2>أفضل المطاعم في البصرة</h2>
-        <p>البصرة تقدم مجموعة متنوعة من المطاعم التي تقدم الأطعمة المحلية والدولية...</p>
-    </section>
-
-    <!-- الصور المتحركة -->
-    <div class="carousel-container">
-        <div class="carousel-slide">
-            <img src="images/photo_2024-11-23_19-15-20.jpg" class="carousel-img" alt="صورة البصرة 1">
-            <img src="images/photo_2024-11-23_19-15-46.jpg" class="carousel-img" alt="صورة البصرة 2">
-            <img src="images/photo_2024-11-24_00-12-39.jpg" class="carousel-img" alt="صورة البصرة 3">
+    <!-- محتوى الصفحة -->
+    <div class="content">
+        <h1 id="title">موقع حصري عن البصرة</h1>
+        <p id="description">البصرة هي مدينة ساحلية في جنوب العراق. تتمتع بموقع استراتيجي على الخليج العربي، مما يجعلها مركزًا تجاريًا رئيسيًا. وتعتبر المدينة مكانًا غنيًا بالمعالم السياحية والتاريخية.</p>
+        <div class="animated-images">
+            <img src="images/photo_2024-11-23_19-15-20.jpg" class="animated-image" alt="صورة متحركة 1">
+            <img src="images/photo_2024-11-23_19-15-46.jpg" class="animated-image" alt="صورة متحركة 2">
+            <img src="images/photo_2024-11-23_19-15-59.jpg" class="animated-image" alt="صورة متحركة 3">
         </div>
     </div>
 

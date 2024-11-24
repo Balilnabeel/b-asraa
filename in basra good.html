@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أهم معالم البصرة السياحية</title>
+    <style>
+        .image-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 30px;
+        }
+        .image-container img {
+            width: 220px;
+            height: 150px;
+            border-radius: 15px;
+            object-fit: cover;
+            transition: transform 0.5s ease, box-shadow 0.5s ease;
+        }
+        .image-container img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #6b0b5a;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        .language-selector {
+            margin-top: 10px;
+            text-align: center;
+        }
+        .language-selector select {
+            font-size: 18px;
+            padding: 5px;
+        }
+        .content {
+            padding: 20px;
+        }
+        .place {
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        .place h2 {
+            color: #450a3c;
+        }
+        .place p {
+            font-size: 18px;
+            line-height: 1.6;
+            text-align: justify;
+        }
+        .image-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        .image-container img {
+            width: 20%;
+            border-radius: 10px;
+            animation: move 10s infinite;
+        }
+        @keyframes move {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1>أهم معالم البصرة السياحية</h1>
+</div>
+
+<div class="language-selector">
+    <select onchange="changeLanguage(this.value)">
+        <option value="ar">عربي</option>
+        <option value="en">English</option>
+        <option value="ku">Kurdî</option>
+    </select>
+</div>
+
+<div class="content">
+    <div class="place" id="place1">
+        <h2>سوق العشار</h2>
+        <p>
+            سوق العشار من الأسواق التقليدية المشهورة في البصرة، ويعود تاريخه إلى العهد العثماني. يتميز هذا السوق بمبانيه القديمة التي تحاكي التراث البصري وتتنوع فيه الحرف اليدوية والبضائع المحلية. يعتبر من الأماكن الحيوية في المدينة التي تجمع بين التجارة والأنشطة الثقافية.
+        </p>
+    </div>
+
+    <div class="place" id="place2">
+        <h2>تمثال أبو جاكوج</h2>
+        <p>
+            يقع تمثال أبو جاكوج في منطقة العشار ويعد من أبرز معالم البصرة السياحية. تمثل هذه التحفة الفنية جزءًا من الثقافة الشعبية في البصرة، حيث يرمز إلى الحياة البحرية والتجارة التي كانت تشتهر بها المدينة على مر العصور. يُعتبر التمثال نقطة جذب سياحية للزوار من مختلف الأماكن.
+        </p>
+    </div>
+
+    <div class="place" id="place3">
+        <h2>كورنيش البصرة</h2>
+        <p>
+            كورنيش البصرة هو أحد المعالم البصرية الشهيرة التي تمتد على طول شط العرب. يُعد هذا المكان مثاليًا للاسترخاء والاستمتاع بمناظر المدينة الخلابة. يتيح للزوار فرصة التنزه والتقاط الصور والاستمتاع بالجو البحري في الهواء الطلق.
+        </p>
+    </div>
+
+    <div class="place" id="place4">
+        <h2>متحف البصرة</h2>
+        <p>
+            متحف البصرة يعد من الأماكن الثقافية المهمة في المدينة، حيث يعرض مجموعة من الآثار التي تمثل تاريخ المنطقة منذ العصور القديمة. يحتوي المتحف على قطع أثرية من العصور الإسلامية القديمة بالإضافة إلى مقتنيات تعكس التراث البصري الغني.
+        </p>
+    </div>
+
+    <div class="image-container">
+        <img src="images/photo_2024-11-24_21-22-30.jpg" alt="سوق العشار">
+        <img src="images/photo_2024-11-24_21-22-59.jpg" alt="تمثال أبو جاكوج">
+        <img src="images/photo_2024-11-24_21-23-08.jpg" alt="كورنيش البصرة">
+        <img src="images/photo_2024-11-24_21-24-10.jpg" alt="متحف البصرة">
+    </div>
+</div>
+
+<script>
+    function changeLanguage(language) {
+        if (language === "ar") {
+            document.getElementById("place1").querySelector("h2").innerText = "سوق العشار";
+            document.getElementById("place1").querySelector("p").innerText = "سوق العشار من الأسواق التقليدية المشهورة في البصرة...";
+            document.getElementById("place2").querySelector("h2").innerText = "تمثال أبو جاكوج";
+            document.getElementById("place2").querySelector("p").innerText = "يقع تمثال أبو جاكوج في منطقة العشار...";
+            document.getElementById("place3").querySelector("h2").innerText = "كورنيش البصرة";
+            document.getElementById("place3").querySelector("p").innerText = "كورنيش البصرة هو أحد المعالم البصرية الشهيرة...";
+            document.getElementById("place4").querySelector("h2").innerText = "متحف البصرة";
+            document.getElementById("place4").querySelector("p").innerText = "متحف البصرة يعد من الأماكن الثقافية المهمة...";
+        } else if (language === "en") {
+            document.getElementById("place1").querySelector("h2").innerText = "Al-Ashar Market";
+            document.getElementById("place1").querySelector("p").innerText = "Al-Ashar Market is one of the most famous traditional markets in Basra...";
+            document.getElementById("place2").querySelector("h2").innerText = "Abu Jakouj Statue";
+            document.getElementById("place2").querySelector("p").innerText = "The Abu Jakouj statue is located in the Al-Ashar area...";
+            document.getElementById("place3").querySelector("h2").innerText = "Basra Corniche";
+            document.getElementById("place3").querySelector("p").innerText = "The Basra Corniche is one of the famous landmarks of the city...";
+            document.getElementById("place4").querySelector("h2").innerText = "Basra Museum";
+            document.getElementById("place4").querySelector("p").innerText = "Basra Museum is one of the important cultural sites in the city...";
+        } else if (language === "ku") {
+            document.getElementById("place1").querySelector("h2").innerText = "بازاری عشار";
+            document.getElementById("place1").querySelector("p").innerText = "بازاری عشار یەکێکە لە بازاڕەکانێکی گەورە لە بصە...";
+            document.getElementById("place2").querySelector("h2").innerText = "تەمثالە ئەبو جاكوج";
+            document.getElementById("place2").querySelector("p").innerText = "تەمثالە ئەبو جاكوج لە ناوچەی عشار دایە...";
+            document.getElementById("place3").querySelector("h2").innerText = "کۆرنییش بصرە";
+            document.getElementById("place3").querySelector("p").innerText = "کۆرنییش بصرە یەکێکە لە پارێزگاکانی گەورە...";
+            document.getElementById("place4").querySelector("h2").innerText = "موزه بصرە";
+            document.getElementById("place4").querySelector("p").innerText = "موزه بصرە یەکێکە لە شوێنە کلتورە گەورەکان...";
+        }
+    }
+</script>
+
+</body>
+</html>
